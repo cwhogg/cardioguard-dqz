@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #E53935;
+  --color-primary-light: #FF6B6B;
+  --color-background: #0F1419;
+  --color-background-elevated: #1A2332;
+  --color-text: #FFFFFF;
+  --color-text-secondary: #B8C5D1;
+  --color-text-muted: #7A8B99;
+  --color-accent: #00BCD4;
+  --color-border: #2D3748;
+  --font-heading: var(--font-inter);
+  --font-body: var(--font-source-sans);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+.font-heading {
+  font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-body {
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-mono {
+  font-family: var(--font-mono), ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, consolas, monospace;
+}
+
+.prose {
+  @apply text-text-secondary leading-relaxed;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  @apply text-text font-heading font-semibold;
+}
+
+.prose h1 {
+  @apply text-4xl mb-6;
+}
+
+.prose h2 {
+  @apply text-3xl mb-4 mt-8;
+}
+
+.prose h3 {
+  @apply text-2xl mb-3 mt-6;
+}
+
+.prose p {
+  @apply mb-4;
+}
+
+.prose ul,
+.prose ol {
+  @apply mb-4 ml-6;
+}
+
+.prose li {
+  @apply mb-2;
+}
+
+.prose a {
+  @apply text-accent hover:text-primary-light transition-colors duration-200;
+}
+
+.prose strong {
+  @apply text-text font-semibold;
+}
+
+.prose code {
+  @apply font-mono text-sm bg-background-elevated px-1.5 py-0.5 rounded;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #E53935 0%, #FF6B6B 50%, #00BCD4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-gradient {
+  background: linear-gradient(135deg, rgba(229, 57, 53, 0.1) 0%, rgba(0, 188, 212, 0.05) 100%);
+  border: 1px solid rgba(229, 57, 53, 0.2);
+}
+
+.btn-primary {
+  @apply bg-primary hover:bg-primary-light text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50;
+}
+
+.btn-secondary {
+  @apply bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50;
+}
